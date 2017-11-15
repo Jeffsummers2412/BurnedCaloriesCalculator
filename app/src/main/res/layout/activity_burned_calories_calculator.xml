@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/darker_gray"
+    tools:context="summers.burnedcaloriescalculator.BurnedCaloriesCalculator">
+
+    <EditText
+        style="@style/editText"
+        android:id="@+id/weightET"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="45dp"
+        android:singleLine="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignEnd="@+id/inchSpinner" />
+
+    <TextView
+        android:id="@+id/calBurnedTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/_000_00"
+        tools:layout_editor_absoluteX="44dp"
+        tools:layout_editor_absoluteY="56dp"
+        android:textSize="20sp"
+        android:layout_centerVertical="true"
+        android:layout_alignStart="@+id/milesTotalTV" />
+
+    <TextView
+        android:id="@+id/milesTotalTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1"
+        tools:layout_editor_absoluteX="44dp"
+        tools:layout_editor_absoluteY="114dp"
+        android:textSize="20sp"
+        android:layout_marginTop="52dp"
+        android:layout_below="@+id/weightET"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/bmiTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/bmi"
+        tools:layout_editor_absoluteX="42dp"
+        tools:layout_editor_absoluteY="186dp"
+        android:layout_alignBaseline="@+id/bmiAmountTV"
+        android:layout_alignBottom="@+id/bmiAmountTV"
+        android:layout_alignEnd="@+id/heightTV"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/heightTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/height"
+        tools:layout_editor_absoluteX="44dp"
+        tools:layout_editor_absoluteY="246dp"
+        android:layout_marginTop="55dp"
+        android:textSize="20sp"
+        android:layout_below="@+id/calBurnedTV"
+        android:layout_alignEnd="@+id/milesTV"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/caloriesTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/calories_burned"
+        tools:layout_editor_absoluteX="44dp"
+        tools:layout_editor_absoluteY="332dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_above="@+id/heightTV"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/bmiAmountTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="00.0"
+        tools:layout_editor_absoluteX="152dp"
+        tools:layout_editor_absoluteY="114dp"
+        android:layout_marginTop="47dp"
+        android:layout_below="@+id/footSpinner"
+        android:layout_alignStart="@+id/footSpinner"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/milesTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/miles_ran"
+        tools:layout_editor_absoluteX="152dp"
+        tools:layout_editor_absoluteY="186dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_alignTop="@+id/seekBar"
+        android:layout_alignStart="@+id/weightTV" />
+
+    <TextView
+        android:id="@+id/weightTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/weight"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginStart="16dp"
+        android:layout_alignBaseline="@+id/weightET"
+        android:layout_alignBottom="@+id/weightET"
+        android:layout_alignParentStart="true" />
+
+    <Spinner
+        android:id="@+id/inchSpinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="54dp"
+        android:layout_alignTop="@+id/footSpinner"
+        android:layout_alignParentEnd="true" />
+
+    <Spinner
+        android:id="@+id/footSpinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/heightTV"
+        android:layout_alignStart="@+id/calBurnedTV" />
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:max="40"
+        android:progress="1"
+        android:layout_alignBottom="@+id/milesTotalTV"
+        android:layout_alignStart="@+id/inchSpinner" />
+
+    <EditText
+        android:id="@+id/nameET"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/name"
+        android:layout_marginBottom="17dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/bmiTV" />
+</RelativeLayout>
+
